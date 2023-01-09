@@ -1,10 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
-public class JDemoRoundedRectangles extends JPanel
-{
+public class JDemoRoundedRectangles extends JPanel{
    @Override
-   public void paintComponent(Graphics gr)
-   {
+   public void paintComponent(Graphics gr){
       super.paintComponent(gr);
       int x = 20;
       int y = 40;
@@ -17,8 +15,7 @@ public class JDemoRoundedRectangles extends JPanel
          x += HORIZONTAL_GAP;
       }
    }
-   public static void main(String[] args)
-   {
+   public static void main(String[] args){
       JFrame frame = new JFrame();
       frame.add(new JDemoRoundedRectangles());
       frame.setSize(430, 180);

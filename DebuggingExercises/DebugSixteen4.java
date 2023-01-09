@@ -4,9 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.Color;
 import java.awt.event.*;
-public class DebugSixteen4 extends JPanel implements ActionListener
-{
-   JLabel header = new JLabel("Outfit planner);
+public class DebugSixteen4 extends JPanel implements ActionListener{
+   JLabel header = new JLabel("Outfit planner");
    JButton changeButton = new JButton("Change clothes");
    int counter = 0;
    int xTop[] = { 20, 40, 50, 60, 80, 75, 62, 66, 40, 38, 25, 20};
@@ -18,16 +17,14 @@ public class DebugSixteen4 extends JPanel implements ActionListener
    int y = 80;
    final int GAP = 20;
    int cycle = 0;
-   public DebugSixteen4()
-   {
+   public DebugSixteen4(){
       setBackground(Color.WHITE);
       add(header);
       add(changeButton);
       changeButton.addActionListener(this);
    }
    @Override
-   public void paintComponent(Graphics g)
-   {
+   public void paintComponent(Graphics g){
       super.paintComponent(g);
       ++counter;
       g.setFont(font);
@@ -40,13 +37,11 @@ public class DebugSixteen4 extends JPanel implements ActionListener
       g.drawString("Only $" + PRICE, X, y += GAP);
    }
    @Override
-   public void actionPerformed(ActionEvent e)
-   {
+   public void actionPerformed(ActionEvent e){
       cycle = counter % colors.length;
       repaint();
    }
-   public static void main(String[] args)
-   {
+   public static void main(String[] args){
       JFrame frame = new JFrame();
       frame.add(new DebugSixteen4());
       frame.setSize(350, 240);

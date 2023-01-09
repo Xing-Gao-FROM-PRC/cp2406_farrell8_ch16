@@ -2,8 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.Color;
-public class JPanelWithButton extends JPanel implements ActionListener
-{
+public class JPanelWithButton extends JPanel implements ActionListener{
    JButton button = new JButton("Press me");
    Color color;
    String colorString;
@@ -15,22 +14,18 @@ public class JPanelWithButton extends JPanel implements ActionListener
       add(button);
       button.addActionListener(this);
    }
-   public void actionPerformed(ActionEvent e)
-   {
-      if(color.equals(Color.RED))
-      {
+   public void actionPerformed(ActionEvent e){
+      if(color.equals(Color.RED)){
          color = Color.BLUE;  
          colorString = "blue";
       }
-      else
-      {
+      else{
          color = Color.RED;
          colorString = "red";
       }
       setBackground(color);
    }
-   public void paintComponent(Graphics g)
-   {
+   public void paintComponent(Graphics g){
       super.paintComponent(g);
       g.drawString("The panel is " + colorString, 20, 80);
    }

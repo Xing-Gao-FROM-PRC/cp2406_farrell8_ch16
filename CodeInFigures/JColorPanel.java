@@ -1,12 +1,10 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.Color;
-public class JColorPanel extends JPanel
-{
+public class JColorPanel extends JPanel{
    int count = 0;
    String colorString;
-   public JColorPanel(Color color)
-   {
+   public JColorPanel(Color color){
       if(color.equals(Color.RED))
          colorString = "red";
       else
@@ -14,8 +12,7 @@ public class JColorPanel extends JPanel
       setBackground(color);
    }
    @Override
-   public void paintComponent(Graphics g)
-   {
+   public void paintComponent(Graphics g){
       super.paintComponent(g);
       ++count;
       System.out.println("In paintComponent() method -- " +
